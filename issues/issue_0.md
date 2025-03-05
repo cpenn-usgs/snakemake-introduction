@@ -15,7 +15,7 @@ Note: You may have issues installing with the environment.yaml file. This could 
 
 If you did not receive any errors when creating the environment, test that the Conda environment was created successfully by activating it: `conda activate snakemake-tutorial`
 
-If that worked, let's also test out your installation of Snakemake by running `snakemake --help`. You should see the documentation for Snakemake printed to your console.
+If that worked, let's also test out your installation of Snakemake by running `snakemake --help`. You should see the documentation for Snakemake printed to your console. If using VS Code, you may have to exit and restart VS Code for snakemake to be activated.
 
 If you are unable to activate your Conda environment, you will need to start over with the manual installation. Proceed to the **Create environment and install packages manually** section.
 

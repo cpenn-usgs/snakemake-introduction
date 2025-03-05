@@ -15,6 +15,6 @@ def main(out_file, site_files):
     combine_site_files(site_files, out_file)
 
 if __name__ == '__main__':
-    out_file = "2_process/out/combined_doy.csv"
-    site_files = ["2_process/out/doy_107072210.csv", "2_process/out/doy_120020150.csv"]
+    out_file = snakemake.output['out_file']
+    site_files = snakemake.input
     main(out_file, site_files)

@@ -23,7 +23,7 @@ def main(combined_doy_means, out_file, depths):
     plot_doy_means(out_file, df_sel_depths)
 
 if __name__ == '__main__':
-    combined_doy_means = "2_process/out/combined_doy.csv"
-    out_file = "3_plot/out/doy_plot.png"
-    depths = [0, 1, 2, 5]
+    combined_doy_means = snakemake.input['in_file']
+    out_file = snakemake.output['out_file']
+    depths = snakemake.params['lake_depths']
     main(combined_doy_means, out_file, depths)

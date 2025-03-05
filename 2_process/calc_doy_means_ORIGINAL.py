@@ -23,7 +23,8 @@ def main(out_file, in_file, lake_id):
     calc_doy_means(df, lake_id, out_file)
 
 if __name__ == '__main__':
-    out_file = snakemake.output['out_file']
-    in_file = snakemake.input['in_file']
-    lake_id = snakemake.wildcards['lake_id']
-    main(out_file, in_file, lake_id)
+    lake_ids = ["120020150", "107072210"]
+    for lake_id in lake_ids:
+        out_file = f"2_process/out/doy_{lake_id}.csv"
+        in_file = f"1_fetch/out/tmp/pgdl_nhdhr_{lake_id}_temperatures.csv"
+        main(out_file, in_file, lake_id)
