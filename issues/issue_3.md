@@ -82,6 +82,8 @@ rule unzip_sb_data:
         "1_fetch/out/tmp/pgdl_nhdhr_120020480_temperatures.csv",
         "1_fetch/out/tmp/pgdl_nhdhr_120020497_temperatures.csv",
         "1_fetch/out/tmp/pgdl_nhdhr_120020979_temperatures.csv"
+    script:
+        "1_fetch/unzip_file.py"
 ```
 Specifying multiple outputs is as simple as listing many strings separated by commas.
 You can specify multiple inputs or parameters in exactly the same way.
